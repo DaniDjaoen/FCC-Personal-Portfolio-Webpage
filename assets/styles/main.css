@@ -166,6 +166,74 @@ ul {
     padding-bottom: 50px;
     background-color: rgb(0, 0, 255);
 }
+@keyframes viewall {
+    to {
+        background-color: rgb(255, 255, 255);
+        box-shadow: 0 0 6px 0 rgb(0, 0, 0, 0.5);
+        transform: scale(1.01);
+        color: rgb(0, 0, 255);
+    }
+}
+#work-viewall{
+    text-align: center;
+    margin-top: 75px;
+}
+#work-viewall a {
+    padding: 20px;
+    display: block;
+    background-color: rgb(0, 0, 255);
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    text-decoration: none;
+    width: 100%;
+}
+#work-viewall a:hover {
+    animation-name: viewall;
+    animation-duration: 100ms;
+    animation-fill-mode: forwards;
+}
+#contact {
+    color: rgb(255, 255, 255);
+    min-height: 310px;
+}
+#contact ul {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+#contact li {
+    text-align: center;
+    list-style: none;
+}
+@keyframes contactlinks {
+    to {
+        background-color: rgb(255, 255, 255);
+        box-shadow: 0 0 6px 0 rgb(0, 0, 0, 0.9);
+        color: rgb(0, 0, 255);
+        font-weight: bold;
+        font-size: 1.3em;
+    }
+}
+#contact a {
+    color: rgb(0,0,0);
+    padding: 15px;
+    background-color: rgb(211, 211, 211);
+    font-size: 1.2em;
+    text-decoration: none;
+}
+#contact a:hover {
+    animation-name: contactlinks;
+    animation-duration: 100ms;
+    animation-fill-mode: forwards;
+}
+#creator-credit {
+    text-align: center;
+}
 #creator-credit img {
-    width: 60%;
+    width:500px;
+}
+#creator-credit a:hover img {
+    animation-name: logohover;
+    animation-fill-mode: forwards;
+    animation-duration: 100ms;
 }
