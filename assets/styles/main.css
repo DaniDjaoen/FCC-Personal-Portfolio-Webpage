@@ -1,3 +1,6 @@
+body {
+    display: inline-block;
+}
 img {
     width: auto;
     height: auto;
@@ -6,7 +9,7 @@ ul {
     padding: 0;
     margin: 0;
 }
-#nav-bar {
+#navbar {
     height: 102px;
     display: flex;
     flex-direction: row;
@@ -64,19 +67,19 @@ ul {
     background-image: url(../../assets/images/background.jpg);
     background-size: cover;
     background-position: center;
-    min-height: 650px;
     padding: 10px 80px;
 }
-#about-textbox {
+#welcome-section {
+    height: 100vh;
     text-align: center;
     color: rgb(211, 211, 211);
 }
-#about-textbox h1 {
+#welcome-section h1 {
     margin: 0;
     margin-top: 250px;
     font-size: 3em;
 }
-#about-textbox p {
+#welcome-section p {
     margin: 0;
     margin-top: 25px;
 }
@@ -103,7 +106,7 @@ ul {
 #work h2, #work h3 {
     text-align: center;
 }
-#work-projects {
+#projects {
     margin-top: 25px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -112,16 +115,16 @@ ul {
     column-gap: 25px;
     row-gap: 25px;
 }
-.projects {
+.project-tile {
     background-color: rgb(255, 255, 255);
     padding: 10px;
 }
-.projects:hover {
+.project-tile:hover {
     animation-name: project-items-hover;
     animation-duration: 100ms;
     animation-fill-mode: forwards;
 }
-.projects a:hover {
+.proje.project-tile cts a:hover {
     text-decoration: none;
 }
 .project-images {
@@ -236,4 +239,33 @@ ul {
     animation-name: logohover;
     animation-fill-mode: forwards;
     animation-duration: 100ms;
+}
+@media (max-width: 1200px) {
+    #projects {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+@media (max-width: 800px) {
+    #projects {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media (max-width: 600px) {
+    #projects {
+        grid-template-columns: 1fr;
+    }
+    #work {
+        padding: 0 20px;
+        padding-top: 130px;
+        padding-bottom: 75px;
+    }
+    #contact ul {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        row-gap: 50px;
+    }
+    #contact a {
+        display: block;
+        width: 100%;
+    }
 }
