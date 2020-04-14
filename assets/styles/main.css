@@ -1,0 +1,171 @@
+img {
+    width: auto;
+    height: auto;
+}
+ul {
+    padding: 0;
+    margin: 0;
+}
+#nav-bar {
+    height: 102px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px 80px;
+    background-color: rgb(211, 211, 211);
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 1000;
+}
+@keyframes logohover {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.1);
+    }
+}
+#nav-bar-logo img {
+    height: 80px;
+}
+#nav-bar-logo img:hover {
+    animation-name: logohover;
+    animation-duration: 100ms;
+    animation-fill-mode: forwards;
+}
+#nav-bar-links li {
+    display: inline-block;
+    line-height: 80px;
+}
+@keyframes navbarlinkshover {
+    from {
+        color:rgb(0, 0, 0);
+    }
+    to {
+        color: rgb(0, 0, 255);
+        font-size: 1.3em;
+    }
+}
+#nav-bar-links a {
+    padding: 10px;
+    font-weight: bold;
+    font-size: 1.2em;
+    color: rgb(0, 0, 0);
+}
+#nav-bar-links a:hover {
+    animation-name: navbarlinkshover;
+    animation-duration: 100ms;
+    animation-fill-mode: forwards;
+    text-decoration: none;
+}
+#about {
+    background-image: url(../../assets/images/background.jpg);
+    background-size: cover;
+    background-position: center;
+    min-height: 650px;
+    padding: 10px 80px;
+}
+#about-textbox {
+    text-align: center;
+    color: rgb(211, 211, 211);
+}
+#about-textbox h1 {
+    margin: 0;
+    margin-top: 250px;
+    font-size: 3em;
+}
+#about-textbox p {
+    margin: 0;
+    margin-top: 25px;
+}
+@keyframes project-items-hover {
+    to {
+        box-shadow: 0 0 6px 0 rgb(0, 0, 0, 0.5);
+        background-color: rgb(0, 0, 255);
+        opacity: 0.9;
+        transform: scale(1.05);
+    }
+}
+@keyframes project-items-title-hover {
+    to {
+        background-color: rgb(211, 211, 211);
+        color: rgb(0, 0, 0);
+    }
+}
+#work {
+    padding: 0 80px;
+    padding-top: 130px;
+    padding-bottom: 75px;
+    background-color: rgb(211, 211, 211);
+}
+#work h2, #work h3 {
+    text-align: center;
+}
+#work-projects {
+    margin-top: 25px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    justify-items: center;
+    column-gap: 25px;
+    row-gap: 25px;
+}
+.projects {
+    background-color: rgb(255, 255, 255);
+    padding: 10px;
+}
+.projects:hover {
+    animation-name: project-items-hover;
+    animation-duration: 100ms;
+    animation-fill-mode: forwards;
+}
+.projects a:hover {
+    text-decoration: none;
+}
+.project-images {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+                        "desktop desktop"
+                        "mobile tablet";
+    column-gap: 10px;
+    row-gap: 10px;
+}
+.project-images img {
+    width: 100%;
+}
+.project-images img:nth-child(1) {
+    grid-area: desktop;
+}
+.project-images img:nth-child(2) {
+    grid-area: mobile;
+}
+.project-images img:nth-child(3) {
+    grid-area: tablet;
+}
+.project-title {
+    margin-top: 10px;
+    padding: 10px 0;
+    background-color: rgb(0, 0, 255);
+    color: white;
+}
+.projects:hover .project-title {
+    animation-name: project-items-title-hover;
+    animation-fill-mode: forwards;
+    animation-duration: 100ms;
+}
+.project-title h3 {
+    margin: 0;
+}
+#contact {
+    padding: 0 80px;
+    padding-top: 130px;
+    padding-bottom: 50px;
+    background-color: rgb(0, 0, 255);
+}
+#creator-credit img {
+    width: 60%;
+}
